@@ -5,7 +5,7 @@
 
     <groupId>com.mytaxi.core</groupId>
     <artifactId>spring-property-repositories-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -49,7 +49,7 @@
     </developers>
 
     <scm>
-        <tag>1.0.3a</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/mytaxi/spring-property-repositories</url>
         <connection>scm:git:git://github.com/mytaxi/spring-property-repositories.git</connection>
         <developerConnection>scm:git:git@github.com:mytaxi/spring-property-repositories.git</developerConnection>
