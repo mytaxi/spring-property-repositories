@@ -3,3 +3,4 @@
 **/*.iml
 **/bamboo-specs/
 **/.DS_Store
+**/release.properties
