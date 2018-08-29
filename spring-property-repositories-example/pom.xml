@@ -4,7 +4,7 @@
 
     <groupId>com.mytaxi.core</groupId>
     <artifactId>spring-property-repositories-example</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>spring-property-repositories-example</name>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.mytaxi.core</groupId>
             <artifactId>spring-property-repositories</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -56,10 +56,4 @@
             </plugin>
         </plugins>
     </build>
-
-
-
-  <scm>
-    <tag>spring-property-repositories-parent-1.0.2</tag>
-  </scm>
 </project>
