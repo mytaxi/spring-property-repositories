@@ -1,3 +1,5 @@
 /target/
 /.idea/
-*.imlbamboo-specs/
+*.iml
+bamboo-specs/
+.DS_Store
