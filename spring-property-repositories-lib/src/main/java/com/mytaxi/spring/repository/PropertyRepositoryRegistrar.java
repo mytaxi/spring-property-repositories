@@ -33,14 +33,12 @@ import org.springframework.util.StringUtils;
 
 public class PropertyRepositoryRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware, BeanClassLoaderAware, EnvironmentAware
 {
+    private static final Logger LOG = LoggerFactory.getLogger(PropertyRepositoryRegistrar.class);
     private ClassLoader classLoader;
     private Environment environment;
     private ResourceLoader resourceLoader;
 
-    private static final Logger LOG = LoggerFactory.getLogger(PropertyRepositoryRegistrar.class);
 
-
-    //test
     @Override
     public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry)
     {
@@ -83,23 +81,27 @@ public class PropertyRepositoryRegistrar implements ImportBeanDefinitionRegistra
         Map<String, Object> attributes = importingClassMetadata.getAnnotationAttributes(EnablePropertyRepositories.class.getCanonicalName());
 
         Set<String> basePackages = new HashSet<>();
-        for (String pkg : (String[]) attributes.get("value"))
+        if (attributes != null)
         {
-            if (StringUtils.hasText(pkg))
+            for (String pkg : (String[]) attributes.get("value"))
             {
-                basePackages.add(pkg);
+                if (StringUtils.hasText(pkg))
+                {
+                    basePackages.add(pkg);
+                }
             }
-        }
-        for (String pkg : (String[]) attributes.get("basePackages"))
-        {
-            if (StringUtils.hasText(pkg))
+            for (String pkg : (String[]) attributes.get("basePackages"))
             {
-                basePackages.add(pkg);
+                if (StringUtils.hasText(pkg))
+                {
+                    basePackages.add(pkg);
+                }
             }
-        }
-        for (Class<?> clazz : (Class[]) attributes.get("basePackageClasses"))
-        {
-            basePackages.add(ClassUtils.getPackageName(clazz));
+            for (Class<?> clazz : (Class[]) attributes.get("basePackageClasses"))
+            {
+                basePackages.add(ClassUtils.getPackageName(clazz));
+            }
+
         }
 
         if (basePackages.isEmpty())

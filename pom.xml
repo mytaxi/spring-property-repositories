@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mytaxi.core</groupId>
-    <artifactId>spring-property-repositories</artifactId>
+    <artifactId>spring-property-repositories-parent</artifactId>
     <version>1.0.2-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-property-repositories-lib</module>
+        <module>spring-property-repositories-example</module>
+    </modules>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <versionInfo>
+            name=${project.name}
+            groupId=${project.groupId}
+            artifactId=${project.artifactId}
+            version=${project.version}
+            buildNumber=${buildNumber}
+        </versionInfo>
+    </properties>
 
     <name>Property Repositories</name>
     <description>To make the loading of properties a little bit more convenient I came up with the Idea
@@ -33,60 +53,6 @@
         <connection>scm:git:git://github.com/mytaxi/spring-property-repositories.git</connection>
         <developerConnection>scm:git:git@github.com:mytaxi/spring-property-repositories.git</developerConnection>
     </scm>
-
-    <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <versionInfo>
-            name=${project.name}
-            groupId=${project.groupId}
-            artifactId=${project.artifactId}
-            version=${project.version}
-            buildNumber=${buildNumber}
-        </versionInfo>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.10.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.2.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>4.2.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>4.2.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.10.19</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
     <distributionManagement>
         <repository>
             <id>bintray-mytaxi-oss</id>
