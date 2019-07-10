@@ -2,6 +2,31 @@
 
 # Property Repositories for Spring Framework applications
 
+## Pre Requirements
+
+If you are using yaml files, describing your properties in a unflatten way and using any ids(numbers) as 
+part of the property key, please make sure you are using Spring version _>= 2.0.0_.
+ 
+The reason is that the property keys with ids in the name will be mapped using brackets and you will not be able to load it afterward.
+
+ie:
+
+```yaml
+hello:
+  countries:
+    1: Ola!
+    2: Servus!
+    3: Hello!
+```
+Internally, it will be mapped to:
+
+```properties
+"hello.country[1]" -> "Ola!"
+"hello.country[2]" -> "Servus!"
+"hello.country[3]" -> "Hello!"
+```
+If you have this use case, make sure the Spring version is _>= 2.0.0_ 
+
 ## How to enable the feature
 
 **Add `@EnablePropertyRepositories` annotation to one of your configuration classes.**
