@@ -1,4 +1,4 @@
-[![Download](https://api.bintray.com/packages/mytaxi/oss/Spring-Property-Repositories/images/download.svg) ](https://bintray.com/mytaxi/oss/Spring-Property-Repositories/_latestVersion) [![Build Status](https://travis-ci.org/mytaxi/spring-property-repositories.svg?branch=master)](https://travis-ci.org/mytaxi/spring-property-repositories)
+[![Download](https://api.bintray.com/packages/mytaxi/oss/Spring-Property-Repositories/images/download.svg) ](https://bintray.com/mytaxi/oss/Spring-Property-Repositories/_latestVersion) [![Build Status](https://travis-ci.org/freenowtech/spring-property-repositories.svg?branch=master)](https://travis-ci.org/freenowtech/spring-property-repositories)
 
 # Property Repositories for Spring Framework applications
 
