@@ -4,7 +4,7 @@
 
     <groupId>com.mytaxi.core</groupId>
     <artifactId>spring-property-repositories-example</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>spring-property-repositories-example</name>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.mytaxi.core</groupId>
             <artifactId>spring-property-repositories</artifactId>
-            <version>1.0.4-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
